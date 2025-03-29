@@ -1,0 +1,26 @@
+{
+  "name": "gerenciador-financas-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeaMarinhoDev/gerenciador-financas-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BeaMarinhoDev/gerenciador-financas-web/issues"
+  },
+  "homepage": "https://github.com/BeaMarinhoDev/gerenciador-financas-web#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "express": "^4.21.2"
+  }
+}

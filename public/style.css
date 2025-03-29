@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.action-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.action-buttons button.edit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.action-buttons button.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
