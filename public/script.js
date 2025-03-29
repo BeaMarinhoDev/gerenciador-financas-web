@@ -10,7 +10,7 @@ async function fetchUsers() {
                 <td>${user.id}</td>
                 <td>${user.nome}</td>
                 <td>${user.email}</td>
-                <td>${new Date(user.dataCadastro).toLocaleDateString()}</td>
+                <td>${new Date(user.data_cadastro).toLocaleDateString()}</td>
                 <td>${user.cpf}</td>
                 <td class="action-buttons">
                     <button class="edit" onclick="editUser(${user.id})">Editar</button>
