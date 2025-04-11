@@ -1,0 +1,122 @@
+/* login.css */
+body {
+    background-color: #1a237e; /* Azul escuro */
+    color: white; /* Texto branco para contraste */
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o fundo cubra toda a tela */
+    background-image: url('dollar-pattern.png'); /* Substitua pelo caminho da sua imagem de cifrões */
+    background-repeat: repeat; /* Repete a imagem para cobrir o fundo */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para o container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Aumentei um pouco a largura */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #fdd835; /* Amarelo para destacar o título */
+}
+
+.login-section, .signup-section {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente para as seções */
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* As seções ocupam a largura do container */
+    text-align: center;
+}
+
+h2 {
+    color: #fdd835;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #eee;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #fdd835; /* Amarelo para os botões */
+    color: #1a237e; /* Texto azul escuro nos botões */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0c330;
+}
+
+.error-message {
+    color: #ffeb3b; /* Amarelo mais claro para a mensagem de erro */
+    margin-top: 15px;
+}
+
+.signup-section p {
+    margin-bottom: 15px;
+}
+
+#goToSignup {
+    background-color: #4caf50; /* Verde para o botão de cadastro */
+    color: white;
+}
+
+#goToSignup:hover {
+    background-color: #43a047;
+}
+
+.forgot-password {
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #fdd835;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #e0c330;
+    text-decoration: underline;
+}
