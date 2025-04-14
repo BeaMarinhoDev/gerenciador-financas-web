@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #c0392b;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fdecea;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    display: none;
+}
+
+.actions {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.primary-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #2980b9;
+}
+
+.secondary-button {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #616a6b;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#userTable thead th {
+    background-color: #34495e;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+#userTable tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+#userTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#userTable tbody tr:hover {
+    background-color: #e0f2f7;
+}
+
+#userTable tbody td:last-child {
+    text-align: center;
+}
+
+#userTable tbody td button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#userTable tbody td button:first-child {
+    background-color: #27ae60;
+    color: white;
+}
+
+#userTable tbody td button:first-child:hover {
+    background-color: #219653;
+}
+
+#userTable tbody td button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#userTable tbody td button:last-child:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para o Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-content div {
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.modal-content input[type=text],
+.modal-content input[type=email],
+.modal-content input[type=password] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-content input[type=text]:focus,
+.modal-content input[type=email]:focus,
+.modal-content input[type=password]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.modal-content small {
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+
+.modal-actions {
+    text-align: right;
+    margin-top: 20px;
+}

@@ -17,7 +17,8 @@ async function login() {
 
         const data = await response.json();
 
-        if (response.ok && data.token) {
+        if (response.ok && data && data.token) {
+            localStorage.setItem('authToken', data.token);
             window.location.href = '/home.html'; // Redirecionar para a página de home
         } else {
             loginError.textContent = data.message || 'Erro ao fazer login. Verifique seu e-mail e senha.';
