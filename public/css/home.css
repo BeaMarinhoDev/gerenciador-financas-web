@@ -1,0 +1,146 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 960px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+/* Seção de resumo (saldo, crédito, débito) */
+#resumo {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+}
+
+#resumo > div {
+    text-align: center;
+}
+
+#resumo h2 {
+    color: #28a745;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#resumo .saldo h2 {
+    color: #007bff;
+}
+
+#resumo .debito h2 {
+    color: #dc3545;
+}
+
+#resumo p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Seção de ações rápidas */
+#acoes {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#acoes h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+#acoes button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#acoes button:hover {
+    background-color: #0056b3;
+}
+
+/* Seção de extrato recente */
+#extratoRecente {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+#extratoRecente h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#extratoRecente ul {
+    list-style: none;
+    padding: 0;
+}
+
+#extratoRecente ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#extratoRecente ul li:last-child {
+    border-bottom: none;
+}
+
+#extratoRecente button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#extratoRecente button:hover {
+    background-color: #545b62;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    color: #777;
+    border-top: 1px solid #eee;
+}

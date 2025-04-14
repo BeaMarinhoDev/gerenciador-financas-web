@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Finanças - Home</title>
-    </head>
+    <link rel="stylesheet" href="css/home.css"> </head>
 <body>
-    <h1>Bem-vindo ao seu Gerenciador de Finanças!</h1>
-    <p>Você fez login com sucesso.</p>
-    </body>
+    <div class="container">
+        <header>
+            <h1>Bem-vindo(a), <span id="nomeUsuario"></span>!</h1>
+            <p>Acompanhe suas finanças de perto.</p>
+        </header>
+
+        <section id="resumo">
+            <div class="saldo">
+                <h2>Saldo Total</h2>
+                <p id="saldoTotal">R$ 0,00</p>
+            </div>
+            <div class="credito">
+                <h2>Crédito</h2>
+                <p id="creditoTotal">R$ 0,00</p>
+            </div>
+            <div class="debito">
+                <h2>Débito</h2>
+                <p id="debitoTotal">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="acoes">
+            <h2>Ações Rápidas</h2>
+            <button id="btnExtrato">Ver Extrato</button>
+            <button id="btnAdicionarCredito">Adicionar Crédito</button>
+            <button id="btnAdicionarDebito">Adicionar Débito</button>
+            <button id="btnGerenciarCategorias">Gerenciar Categorias</button>
+        </section>
+
+        <section id="extratoRecente">
+            <h2>Extrato Recente</h2>
+            <ul id="listaExtrato">
+                </ul>
+            <button id="btnVerMaisExtrato">Ver Mais Extrato</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Gerenciador de Finanças</p>
+        </footer>
+    </div>
+
+    <script src="js/home.js"></script> </body>
 </html>
