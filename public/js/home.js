@@ -1,15 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
     const nomeUsuarioSpan = document.getElementById('nomeUsuario');
     const listaExtratoUl = document.getElementById('listaExtrato');
+    const btnExtrato = document.getElementById('btnExtrato');
+    const token = localStorage.getItem('authToken');
+    const userId = localStorage.getItem('userId');
+
+    if (!token) {
+        alert('Token de autenticação não encontrado. Você será redirecionado para a página de login.');
+        window.location.href = '/index.html'; // Redireciona para a página de login
+        return;
+    }
+    if (btnExtrato) {
+        btnExtrato.addEventListener('click', () => {
+            // Esta função será executada quando o botão for clicado
+            window.location.href = '/extrato.html'; // Redireciona para a página extrato.html
+        });
+    }
+
+    
+    console.log(`User ID: ${userId}`);
 
     // Buscar nome do usuário (código já existente)
-    fetch('/api/user')
-        .then(/* ... */)
-        .then(/* ... */)
-        .catch(/* ... */);
+   if (token) {
+        fetch(`http://localhost:3000/users/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (nomeUsuarioSpan) {
+                nomeUsuarioSpan.textContent = `${data.nome}!`;
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do usuário:', error);
+            // Lógica para lidar com erros (redirecionar para login, exibir mensagem, etc.)
+        });
+    } else {
+        // Se não houver token, o usuário não está logado
+        window.location.href = '/login.html'; // Redirecionar para a página de login
+    }
+
 
     // Buscar transações recentes
-    fetch('http://localhost:3000/users/7/transactions/recent')
+    fetch(`http://localhost:3000/users/${userId}/transactions/recent`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+        })
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -38,4 +86,5 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.textContent = 'Erro ao carregar o extrato.';
             listaExtratoUl.appendChild(listItem);
         });
+
 });

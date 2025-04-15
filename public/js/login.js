@@ -19,6 +19,7 @@ async function login() {
 
         if (response.ok && data && data.token) {
             localStorage.setItem('authToken', data.token);
+            localStorage.setItem('userId', data.id);
             window.location.href = '/home.html'; // Redirecionar para a página de home
         } else {
             loginError.textContent = data.message || 'Erro ao fazer login. Verifique seu e-mail e senha.';
