@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extrato de Finanças</title>
-    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="css/extrato.css"> </head>
+    <title>Gerenciador de Finanças - Extrato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css"> <link rel="stylesheet" href="css/extrato.css"> </head>
 <body>
     <div class="container">
-        <h1>Extrato de Finanças</h1>
-        <p>Aqui você verá o seu extrato detalhado.</p>
+        <header>
+            <h1>Extrato de Finanças</h1>
+            <p>Visualize e filtre suas transações.</p>
+        </header>
+
+        <section id="filtros">
+            <h2>Filtrar Extrato</h2>
+            <div class="filtros-container">
+                <label for="filtroData">Data:</label>
+                <input type="date" id="filtroData">
+
+                <label for="filtroTipo">Tipo:</label>
+                <select id="filtroTipo">
+                    <option value="">Todos</option>
+                    <option value="credito">Crédito</option>
+                    <option value="debito">Débito</option>
+                </select>
+
+                <label for="filtroCategoria">Categoria:</label>
+                <select id="filtroCategoria">
+                    <option value="">Todas</option>
+                    </select>
+
+                <button id="btnFiltrar">Filtrar</button>
+                <button id="btnLimparFiltros">Limpar Filtros</button>
+            </div>
+        </section>
+
+        <section id="listaExtrato">
+            <h2>Transações</h2>
+            <div class="table-container">
+                <table id="tabelaExtrato">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                            <th>Data</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Gerenciador de Finanças</p>
+        </footer>
         <button onclick="window.location.href = '/home.html'">Voltar para Home</button>
     </div>
-    <script src="js/extrato.js"></script> </body>
+    <script src="js/extrato.js"></script>
+</body>
 </html>

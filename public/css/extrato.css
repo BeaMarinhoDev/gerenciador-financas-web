@@ -1,0 +1,132 @@
+/* Estilos gerais para a página de extrato */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4; /* Um fundo cinza claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filtros {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+#filtros h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.filtros-container label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.filtros-container input[type="date"],
+.filtros-container select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#btnFiltrar,
+#btnLimparFiltros {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#btnFiltrar:hover,
+#btnLimparFiltros:hover {
+    background-color: #0056b3;
+}
+
+#listaExtrato h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    overflow-x: auto; /* Para tabelas largas em telas pequenas */
+}
+
+#tabelaExtrato {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#tabelaExtrato th,
+#tabelaExtrato td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabelaExtrato th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#tabelaExtrato tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #5cb85c; /* Cor verde para botões gerais */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+}

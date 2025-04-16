@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Buscar transações recentes
-    fetch(`http://localhost:3000/users/${userId}/transactions/recent`, {
+    fetch(`http://localhost:3000/users/transactions/recent`, { // tirei o ${userId} pq aparentemente, era o erro no extrato.
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -66,11 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(transactions => {
             if (transactions && transactions.length > 0) {
-                transactions.forEach(transaction => {
+                transactions.slice(0, 5).forEach(transaction => {
                     const listItem = document.createElement('li');
                     const tipoTexto = transaction.tipo === 'credit' ? 'Crédito' : 'Débito';
                     const valorFormatado = parseFloat(transaction.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-                    const dataFormatada = new Date(transaction.data).toLocaleDateString();
+                    //const dataFormatada = new Date(transaction.data_vencimento).toLocaleDateString();
+                    const dataFormatada = transaction.data;
+                
                     listItem.textContent = `${dataFormatada} - ${tipoTexto}: ${valorFormatado} (${transaction.descricao})`;
                     listaExtratoUl.appendChild(listItem);
                 });
@@ -86,5 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.textContent = 'Erro ao carregar o extrato.';
             listaExtratoUl.appendChild(listItem);
         });
+        const btnLogout = document.getElementById('btnLogout');
+
+    if (btnLogout) {
+        btnLogout.addEventListener('click', () => {
+            // Remove o token de autenticação do localStorage
+            localStorage.removeItem('authToken');
+
+            // Redireciona o usuário para a página de login
+            window.location.href = '/login.html';
+        });
+    }
 
 });

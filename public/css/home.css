@@ -144,3 +144,22 @@ footer {
     color: #777;
     border-top: 1px solid #eee;
 }
+/* Estilos para o botão "Sair" */
+#btnLogout {
+    display: block; /* Para ocupar a largura total ou ajustar com margin */
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 300px; /* Largura máxima opcional */
+    padding: 12px 20px; /* Aumenta o espaçamento interno para torná-lo maior */
+    margin: 20px auto; /* Centraliza o botão horizontalmente e adiciona margem vertical */
+    background-color: #007bff; /* Cor azul (padrão de muitos botões) */
+    color: white; /* Letras brancas */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Adiciona cantos arredondados (opcional) */
+    font-size: 1.1em; /* Aumenta o tamanho da fonte (opcional) */
+    cursor: pointer; /* Muda o cursor ao passar o mouse para indicar que é clicável */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove sublinhado padrão de links, se você usar <a> */
+}
+#btnLogout:hover {
+    background-color: #0056b3; /* Cor azul mais escura ao passar o mouse (feedback visual) */
+}
