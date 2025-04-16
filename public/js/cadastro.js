@@ -33,7 +33,7 @@ async function cadastrarUsuario() {
             alert('Cadastro realizado com sucesso! Você será redirecionado para a página de login.');
             window.location.href = '/'; // Redireciona para a página de login (index.html)
         } else {
-            signupError.textContent = data.message || 'Erro ao cadastrar usuário.';
+            signupError.textContent = data.mensagem || 'Erro ao cadastrar usuário.';
         }
 
     } catch (error) {
