@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Buscar transações recentes
-    fetch(`http://localhost:3000/users/${userId}/transactions/recent`, {
+    fetch(`http://localhost:3000/users/transactions/recent`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
