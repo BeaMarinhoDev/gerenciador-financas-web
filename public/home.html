@@ -35,6 +35,57 @@
             <button id="btnAdicionarDebito">Adicionar Débito</button>
             <button id="btnGerenciarCategorias">Gerenciar Categorias</button>
         </section>
+        <div id="formAdicionarCredito" style="display: none;">
+            <h2>Adicionar Crédito</h2>
+            <form id="formCredito">
+                <div>
+                    <label for="creditoValor">Valor:</label>
+                    <input type="number" id="creditoValor" name="valor" required>
+                </div>
+                <div>
+                    <label for="creditoDescricao">Descrição:</label>
+                    <input type="text" id="creditoDescricao" name="descricao" required>
+                </div>
+                <div>
+                    <label for="creditoData">Data:</label>
+                    <input type="date" id="creditoData" name="data_vencimento" required>
+                </div>
+                <div>
+                    <label for="creditoCategoria">Categoria:</label>
+                    <select id="creditoCategoria" name="category_id">
+                        <option value="">Selecione a categoria</option>
+                        </select>
+                </div>
+                <button type="submit">Adicionar Crédito</button>
+                <button type="button" id="btnCancelarCredito">Cancelar</button>
+            </form>
+        </div>
+        
+        <div id="formAdicionarDebito" style="display: none;">
+            <h2>Adicionar Débito</h2>
+            <form id="formDebito">
+                <div>
+                    <label for="debitoValor">Valor:</label>
+                    <input type="number" id="debitoValor" name="valor" required>
+                </div>
+                <div>
+                    <label for="debitoDescricao">Descrição:</label>
+                    <input type="text" id="debitoDescricao" name="descricao" required>
+                </div>
+                <div>
+                    <label for="debitoData">Data:</label>
+                    <input type="date" id="debitoData" name="data_vencimento" required>
+                </div>
+                <div>
+                    <label for="debitoCategoria">Categoria:</label>
+                    <select id="debitoCategoria" name="category_id">
+                        <option value="">Selecione a categoria</option>
+                        </select>
+                </div>
+                <button type="submit">Adicionar Débito</button>
+                <button type="button" id="btnCancelarDebito">Cancelar</button>
+            </form>
+        </div>
 
         <section id="extratoRecente">
             <h2>Extrato Recente</h2>
@@ -46,6 +97,63 @@
         <footer>
             <p>&copy; 2025 Gerenciador de Finanças</p>
         </footer>
+    
+        <div id="modalAdicionarCredito" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="fecharModalCredito">&times;</span>
+                <h2>Adicionar Crédito</h2>
+                <form id="formCreditoModal">
+                    <div>
+                        <label for="modalCreditoValor">Valor:</label>
+                        <input type="number" id="modalCreditoValor" name="valor" required>
+                    </div>
+                    <div>
+                        <label for="modalCreditoDescricao">Descrição:</label>
+                        <input type="text" id="modalCreditoDescricao" name="descricao" required>
+                    </div>
+                    <div>
+                        <label for="modalCreditoData">Data de Vencimento:</label>
+                        <input type="date" id="modalCreditoData" name="data_vencimento" required>
+                    </div>
+                    <div>
+                        <label for="modalCreditoCategoria">Categoria:</label>
+                        <select id="modalCreditoCategoria" name="category_id">
+                            <option value="">Selecione a categoria</option>
+                        </select>
+                    </div>
+                    <button type="submit">Adicionar Crédito</button>
+                </form>
+            </div>
+        </div>
+    
+        <div id="modalAdicionarDebito" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="fecharModalDebito">&times;</span>
+                <h2>Adicionar Débito</h2>
+                <form id="formDebitoModal">
+                    <div>
+                        <label for="modalDebitoValor">Valor:</label>
+                        <input type="number" id="modalDebitoValor" name="valor" required>
+                    </div>
+                    <div>
+                        <label for="modalDebitoDescricao">Descrição:</label>
+                        <input type="text" id="modalDebitoDescricao" name="descricao" required>
+                    </div>
+                    <div>
+                        <label for="modalDebitoData">Data de Vencimento:</label>
+                        <input type="date" id="modalDebitoData" name="data_vencimento" required>
+                    </div>
+                    <div>
+                        <label for="modalDebitoCategoria">Categoria:</label>
+                        <select id="modalDebitoCategoria" name="category_id">
+                            <option value="">Selecione a categoria</option>
+                        </select>
+                    </div>
+                    <button type="submit">Adicionar Débito</button>
+                </form>
+            </div>
+        </div>
+    
 
         <button id="btnLogout">Sair</button>
     </div>
