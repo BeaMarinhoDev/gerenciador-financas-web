@@ -19,7 +19,7 @@ async function cadastrarUsuario() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/users/', {
+        const response = await fetch('http://localhost:3000/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

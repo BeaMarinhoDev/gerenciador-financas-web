@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userId = localStorage.getItem('userId');
 
     if (!token) {
-        alert('Token de autenticação não encontrado. Você será redirecionado para a página de login.');
+        //alert('Token de autenticação não encontrado. Você será redirecionado para a página de login.');
         window.location.href = '/index.html'; // Redireciona para a página de login
         return;
     }
@@ -94,9 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLogout.addEventListener('click', () => {
             // Remove o token de autenticação do localStorage
             localStorage.removeItem('authToken');
+            localStorage.removeItem('userId');
 
             // Redireciona o usuário para a página de login
-            window.location.href = '/login.html';
+            window.location.href = '/index.html';
         });
     }
 
