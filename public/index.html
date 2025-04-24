@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gerenciador de Finanças - Login</title>
     <link rel="stylesheet" href="css/login.css"> </head>
 <body>
@@ -20,8 +21,8 @@
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
             </div>
             <p class="error-message" id="loginError"></p>
-            <button type="button" onclick="login()">Entrar</button>
-            <button type="button" onclick="window.location.href = '/cadastro.html';" class="signup-button">Cadastrar</button>
+            <button type="button" onclick="login();" id="btnLogin">Entrar</button>
+            <button type="button" onclick="cadastrar();" class="signup-button">Cadastrar</button>
             <p class="forgot-password"><a href="#">Esqueceu sua senha?</a></p>
         </div>
     </div>

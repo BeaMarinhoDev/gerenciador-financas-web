@@ -250,3 +250,17 @@ footer {
 .modal-content button[type="submit"]:hover {
     background-color: #0056b3;
 }
+/* Estilos específicos para o modal de gerenciamento de categorias (se necessário) */
+#modalGerenciarCategorias .modal-content {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 600px; /* Largura máxima opcional */
+}
+
+#listaDeCategoriasModal,
+#adicionarCategoriaModal {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}

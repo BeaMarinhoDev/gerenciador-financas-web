@@ -1,0 +1,80 @@
+/* Estilos para o cabeçalho do modal */
+.modal-header {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.modal-close-button {
+    /* Estilos do botão de fechar */
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Estilos para os form-groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão de submit */
+.submit-button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.submit-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos opcionais para a lista de itens */
+.lista-itens {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-itens li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.lista-itens li:last-child {
+    border-bottom: none;
+}

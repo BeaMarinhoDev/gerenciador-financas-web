@@ -34,10 +34,30 @@ async function login() {
 // Adicionar um listener para o evento de submit do formulário (opcional, mas boa prática)
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
+
     if (loginForm) {
         loginForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Evita o envio padrão do formulário
+            event.preventDefault();
             login();
         });
     }
 });
+function cadastrar() {
+    // Remover o token do localStorage
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userId');
+
+    // Redirecionar o usuário para a página de login ou home
+    window.location.href = '/cadastro.html'; // Ou qualquer página de sua preferência
+}
+function logout() {
+    // Remover o token do localStorage
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userId');
+    
+    // Redirecionar o usuário para a página de login ou home
+    window.location.href = '/index.html'; // Ou qualquer página de sua preferência
+}
+
+// Chame essa função quando o usuário clicar em "Logout"
+//document.getElementById('btnLogout').addEventListener('click', logout);

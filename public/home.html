@@ -153,8 +153,33 @@
                 </form>
             </div>
         </div>
-    
-
+        <div id="modalGerenciarCategorias" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1><i class="fas fa-tags"></i> Gerenciar Categorias</h1>
+                    <span class="modal-close-button" id="fecharModalCategorias">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <section id="adicionarCategoriaModal">
+                        <h2>Adicionar Nova Categoria</h2>
+                        <form id="formAdicionarCategoriaModal">
+                            <div class="form-group">
+                                <label for="nomeNovaCategoriaModal">Descrição:</label>
+                                <input type="text" id="nomeNovaCategoriaModal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoNovaCategoriaModal">Tipo:</label>
+                                <select id="tipoNovaCategoriaModal">
+                                    <option value="debito">Débito</option>
+                                    <option value="credito">Crédito</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="submit-button">Adicionar</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
         <button id="btnLogout">Sair</button>
     </div>
 
