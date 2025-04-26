@@ -20,6 +20,8 @@ async function login() {
         if (response.ok && data && data.token) {
             localStorage.setItem('authToken', data.token);
             localStorage.setItem('userId', data.id);
+            localStorage.setItem('userName', data.name);
+            console.log("Nome recebido do backend:", data.name);
             window.location.href = '/home.html'; // Redirecionar para a página de home
         } else {
             loginError.textContent = data.message || 'Erro ao fazer login. Verifique seu e-mail e senha.';
