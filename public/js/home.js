@@ -139,6 +139,7 @@ function configurarBotoes() {
     
     document.getElementById("btnLogout")?.addEventListener("click", () => {
         localStorage.removeItem("authToken");
+        localStorage.removeItem("userId");
         localStorage.removeItem("userName");
         window.location.href = "http://localhost:8080/index.html";
     });
