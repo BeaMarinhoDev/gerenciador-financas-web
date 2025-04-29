@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,13 +15,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/BeaMarinhoDev/gerenciador-financas-web/issues"
   },
   "homepage": "https://github.com/BeaMarinhoDev/gerenciador-financas-web#readme",
   "dependencies": {
     "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
     "express": "^4.21.2"
   }
 }
