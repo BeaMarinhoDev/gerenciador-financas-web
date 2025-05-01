@@ -21,12 +21,13 @@
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
             </div>
             <p class="error-message" id="loginError"></p>
-            <button type="button" onclick="login();" id="btnLogin">Entrar</button>
-            <button type="button" onclick="cadastrar();" class="signup-button">Cadastrar</button>
+            <button type="button" id="btnLogin">Entrar</button>
+            <button type="button" id="btnCadastrar" class="signup-button">Cadastrar</button>
             <p class="forgot-password"><a href="#">Esqueceu sua senha?</a></p>
         </div>
     </div>
-
-    <script src="js/login.js"></script>
+    
+    <script src="/config.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 </html>

@@ -1,15 +1,11 @@
 import express from 'express';
 import dotenv from 'dotenv';
 
-//import { errorHandler } from './middlewares/errorHandler.js'; // Middleware de erros
+import { errorHandler } from './middlewares/errorHandler.js'; // Middleware de erros
 //import { notFoundHandler } from './middlewares/notFoundHandler.js'; // Middleware de página não encontrada
 
 // Importação das rotas
-import indexRoutes from './routes/index.js';
-import homeRoutes from './routes/home.js';
-import usersRoutes from './routes/users.js';
-import registerRoutes from './routes/register.js';
-
+import indexRoutes from './index.js';
 
 // Carrega as variáveis de ambiente
 dotenv.config();
@@ -22,12 +18,20 @@ app.use(express.static('public'));
 
 // Uso das rotas
 app.use('/', indexRoutes);
-app.use('/home', homeRoutes);
-app.use('/users', usersRoutes);
-app.use('/register', registerRoutes);
 
 // Middleware global para tratamento de erros
-//app.use(errorHandler);
+app.use(errorHandler);
+
+app.use((req, res, next) => {
+    res.locals.backendUrl = process.env.BACKEND_URL || 'http://localhost:3000';
+    next();
+});
+
+// Middleware para injetar a variável no HTML
+app.get('/config.js', (req, res) => {
+    res.type('application/javascript');
+    res.send(`const backendUrl = "${process.env.BACKEND_URL || 'http://localhost:3000'}";`);
+});
 
 // Inicialização do servidor
 app.listen(port, () => {

@@ -1,3 +1,5 @@
+import apiRequest from './api.js';
+
 async function login() {
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
@@ -7,35 +9,27 @@ async function login() {
     const senha = senhaInput.value;
 
     try {
-        const response = await fetch('http://localhost:3000/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, senha }),
-        });
+        const data = await apiRequest('auth/login', 'POST', { email, senha });
 
-        const data = await response.json();
-
-        if (response.ok && data && data.token) {
+        if (data && data.token) {
             localStorage.setItem('authToken', data.token);
             localStorage.setItem('userId', data.id);
             localStorage.setItem('userName', data.name);
             console.log("Nome recebido do backend:", data.name);
             window.location.href = '/home.html'; // Redirecionar para a página de home
         } else {
-            loginError.textContent = data.message || 'Erro ao fazer login. Verifique seu e-mail e senha.';
+            loginError.textContent = 'Erro ao fazer login. Verifique seu e-mail e senha.';
         }
-
     } catch (error) {
         console.error('Erro ao enviar dados de login:', error);
-        loginError.textContent = 'Erro de conexão com o servidor.';
+        loginError.textContent = error.message || 'Erro de conexão com o servidor.';
     }
 }
 
-// Adicionar um listener para o evento de submit do formulário (opcional, mas boa prática)
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
+    const btnLogin = document.getElementById('btnLogin');
+    const btnCadastrar = document.getElementById('btnCadastrar');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (event) => {
@@ -43,23 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
             login();
         });
     }
+
+    if (btnLogin) {
+        btnLogin.addEventListener('click', login);
+    }
+
+    if (btnCadastrar) {
+        btnCadastrar.addEventListener('click', cadastrar);
+    }
 });
-function cadastrar() {
-    // Remover o token do localStorage
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('userId');
 
-    // Redirecionar o usuário para a página de login ou home
-    window.location.href = '/cadastro.html'; // Ou qualquer página de sua preferência
-}
-function logout() {
-    // Remover o token do localStorage
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('userId');
-    
-    // Redirecionar o usuário para a página de login ou home
-    window.location.href = '/index.html'; // Ou qualquer página de sua preferência
+export function cadastrar() {
+    window.location.href = '/cadastro.html';
 }
 
-// Chame essa função quando o usuário clicar em "Logout"
-//document.getElementById('btnLogout').addEventListener('click', logout);
+export function logout() {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userId');
+    window.location.href = '/index.html';
+}
